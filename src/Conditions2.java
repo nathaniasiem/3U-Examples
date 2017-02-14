@@ -71,6 +71,7 @@ public class Conditions2 {
                 // move
                 karel.turnLeft();
                 karel.move();
+          // if holding 3 things, turn right  
             }else if(karel.countThingsInBackpack() == 3){
                 // drop things
                 karel.putThing();
@@ -81,13 +82,14 @@ public class Conditions2 {
                 karel.turnLeft();
                 karel.turnLeft();
                 karel.move();
+           // if holding 4 things, stop
             }else{
                 // found 4 things
                 break;
             }
             
-            // if holding 3 things, turn right
-            // if holding 4 things, stop
+            
+            
         }
         
         
