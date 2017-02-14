@@ -19,7 +19,7 @@ public class Conditions2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-         // create a city
+  // create a city
         City kw = new City();
         
         // create a robot
@@ -36,7 +36,13 @@ public class Conditions2 {
         new Thing(kw, 2, 3);
         new Thing(kw, 2, 3);
         new Thing(kw, 2, 3);
-        new Thing(kw, 2, 3);
+        //new Thing(kw, 2, 3);
+        
+        new Thing(kw, 2, 4);
+        new Thing(kw, 2, 4);
+        new Thing(kw, 2, 4);
+        new Thing(kw, 2, 4);
+        
         
         // turn on the thing labels
         kw.showThingCounts(true);
@@ -75,6 +81,9 @@ public class Conditions2 {
                 karel.turnLeft();
                 karel.turnLeft();
                 karel.move();
+            }else{
+                // found 4 things
+                break;
             }
             
             // if holding 3 things, turn right
