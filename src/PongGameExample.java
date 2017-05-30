@@ -159,7 +159,18 @@ public class PongGameExample extends JComponent {
 
             //update y coordinate every second
             ball.y += velocityY;
-
+            
+            //when ball exits the screen,add point to player 2
+            if(ball.x<=0){
+                resetBall();
+                player2Score++;
+            }
+            
+            if(ball.x>=WIDTH){
+            resetBall();
+            player1Score++;
+        }
+            
             // GAME LOGIC ENDS HERE 
             // update the drawing (calls paintComponent)
             repaint();
@@ -296,7 +307,11 @@ public class PongGameExample extends JComponent {
         //player 2 bottom part
         if(player2.y + player2.height >= HEIGHT){
         player2.y = player2.y - 5;}
-        
-        
+         
     }
+    public void resetBall(){
+        ball.x=WIDTH/2;
+        ball.y=HEIGHT/2;
+    }
+    
 }
